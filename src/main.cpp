@@ -105,7 +105,7 @@ PORT3,     -PORT4,
 
 );
 
-int current_auton_selection = 5;
+int current_auton_selection = 6;
 bool auto_started = false;
 
 /**
@@ -157,7 +157,7 @@ void pre_auton() {
     if(Brain.Screen.pressing()){
       while(Brain.Screen.pressing()) {}
       current_auton_selection ++;
-    } else if (current_auton_selection == 8){
+    } else if (current_auton_selection < 0){
       current_auton_selection = 3;
     }
     task::sleep(10);

@@ -305,7 +305,7 @@ chassis.drive_distance(-15, 220);
 grab.set(false);
 wait(.2, seconds);
 chassis.drive_distance(13, 220);
-//meth time
+//
 chassis.turn_to_angle(180, 5.5);
 conveyor.setVelocity(100, percent);
 intake.setVelocity(100, percent);
@@ -390,24 +390,22 @@ void testDrive() {
   intake.setVelocity(100, percent);
   chassis.set_coordinates(0,0,0);
 
-  chassis.drive_distance(10,0);
+  chassis.drive_distance(0);
+  chassis.turn_to_angle(0);
+
+  chassis.drive_distance(100);
   chassis.turn_to_angle(90);
-  chassis.drive_distance(10,90);
-  chassis.turn_to_angle(180);
-  chassis.drive_distance(10,180);
-chassis.turn_to_angle(270);
-chassis.drive_distance(10,270);
+  chassis.drive_distance(100);
+  chassis.turn_to_angle(0);
+  chassis.drive_distance(100);
+  chassis.turn_to_angle(270);
+  chassis.drive_distance(100);
+
+
+
+
+
 
 }
 
-
-
-
-
-
-
-
-//do we really need a range of values?
-//can't we just tune one single value for each location?
-//color Yellow = color(255, 247, 0); etc
-
+//waitUntil command
